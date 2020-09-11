@@ -23,7 +23,7 @@ function draw() {
     if(deformation>10){
       bullet.shapeColor=color(255,0,0);
     }
-    if(deformation<10 && deformation>100){
+    if(deformation<10 ){
       bullet.shapeColor=color(0,255,0)  
     }
   }
@@ -32,7 +32,7 @@ function draw() {
 }
 
 function hasCollided(Lbullet,Lwall){
-  bulletRightEdge=Lbullet+Lbullet+1;
+  bulletRightEdge=Lbullet.x+Lbullet.width;
   wallLeftEdge=wall.x;
   if(bulletRightEdge>=wallLeftEdge)
   {
